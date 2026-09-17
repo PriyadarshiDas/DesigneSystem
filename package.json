@@ -1,0 +1,26 @@
+{
+  "name": "agentverse-ui-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": ["packages/*", "apps/*"],
+  "scripts": {
+    "build": "npm run build -w @agentverse/design-system && npm run build -w @agentverse/universe-demo && npm run build -w @agentverse/social-demo",
+    "dev:universe": "npm run dev -w @agentverse/universe-demo",
+    "dev:social": "npm run dev -w @agentverse/social-demo",
+    "lint": "eslint . --max-warnings=0",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test -w @agentverse/design-system",
+    "storybook": "npm run storybook -w @agentverse/design-system",
+    "storybook:build": "npm run storybook:build -w @agentverse/design-system"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.35.0",
+    "eslint": "^9.35.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "typescript-eslint": "^8.42.0"
+  },
+  "engines": { "node": ">=20.19.0" }
+}

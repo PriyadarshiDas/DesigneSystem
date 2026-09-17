@@ -1,0 +1,1 @@
+export const shadows = { none: 'none', sm: '0 1px 2px rgb(7 15 18 / 0.06)', md: '0 8px 24px rgb(7 15 18 / 0.10)', lg: '0 18px 48px rgb(7 15 18 / 0.14)', overlay: '0 24px 80px rgb(7 15 18 / 0.22)' } as const;

@@ -1,0 +1,78 @@
+:root {
+  --av-neutral-0: #fff;
+  --av-neutral-50: #f7f8f8;
+  --av-neutral-100: #eef0f1;
+  --av-neutral-200: #dfe3e5;
+  --av-neutral-300: #c7cdd0;
+  --av-neutral-400: #98a2a7;
+  --av-neutral-500: #6b767c;
+  --av-neutral-600: #4c575d;
+  --av-neutral-700: #343e43;
+  --av-neutral-800: #20292e;
+  --av-neutral-900: #141b1f;
+  --av-neutral-950: #0b1013;
+  --av-brand-300: #70d8bd;
+  --av-brand-400: #38bfa1;
+  --av-brand-500: #1da184;
+  --av-brand-600: #12806a;
+  --av-blue-300: #86bdff;
+  --av-blue-400: #4c98ff;
+  --av-blue-500: #2672f3;
+  --av-blue-600: #1757d6;
+  --av-violet-400: #ab80ff;
+  --av-violet-500: #8f50f4;
+  --av-cyan-400: #1dcced;
+  --av-green-500: #25a66d;
+  --av-amber-500: #e78f0b;
+  --av-red-500: #ef3e3e;
+
+  --av-space-0: 0;
+  --av-space-1: .25rem;
+  --av-space-2: .5rem;
+  --av-space-3: .75rem;
+  --av-space-4: 1rem;
+  --av-space-5: 1.25rem;
+  --av-space-6: 1.5rem;
+  --av-space-8: 2rem;
+  --av-space-10: 2.5rem;
+  --av-space-12: 3rem;
+  --av-space-16: 4rem;
+  --av-space-20: 5rem;
+  --av-space-24: 6rem;
+
+  --av-radius-none: 0;
+  --av-radius-sm: .375rem;
+  --av-radius-md: .625rem;
+  --av-radius-lg: .875rem;
+  --av-radius-xl: 1.25rem;
+  --av-radius-full: 9999px;
+
+  --av-shadow-none: none;
+  --av-shadow-sm: 0 1px 2px rgb(7 15 18 / .06);
+  --av-shadow-md: 0 8px 24px rgb(7 15 18 / .1);
+  --av-shadow-lg: 0 18px 48px rgb(7 15 18 / .14);
+  --av-shadow-overlay: 0 24px 80px rgb(7 15 18 / .22);
+
+  --av-motion-fast: 120ms;
+  --av-motion-normal: 200ms;
+  --av-motion-slow: 360ms;
+  --av-ease-standard: cubic-bezier(.2, 0, 0, 1);
+  --av-ease-enter: cubic-bezier(0, 0, .2, 1);
+  --av-ease-exit: cubic-bezier(.4, 0, 1, 1);
+
+  --av-z-base: 0;
+  --av-z-sticky: 100;
+  --av-z-dropdown: 300;
+  --av-z-popover: 400;
+  --av-z-drawer: 500;
+  --av-z-modal: 600;
+  --av-z-toast: 700;
+  --av-z-tooltip: 800;
+
+  --av-font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --av-font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  --av-control-height-xs: 1.75rem;
+  --av-control-height-sm: 2rem;
+  --av-control-height-md: 2.5rem;
+  --av-control-height-lg: 3rem;
+}

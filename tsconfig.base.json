@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": false,
+    "jsx": "react-jsx",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "paths": {
+      "@agentverse/design-system": ["./packages/design-system/src/index.ts"],
+      "@agentverse/design-system/styles.css": ["./packages/design-system/src/styles/index.css"],
+      "@agentverse/design-system/*": ["./packages/design-system/src/*"]
+    },
+    "skipLibCheck": true,
+    "noEmit": true
+  }
+}
