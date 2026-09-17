@@ -19,7 +19,7 @@ These rules apply to every application that consumes `@agentverse/design-system`
 15. Do not bypass the component library for dialogs, menus, forms, buttons, tooltips, popovers, or agent identity.
 16. Do not import Radix, Lucide, shadcn internals, or design-system private paths from applications.
 17. Do not hardcode product names inside shared primitive components.
-18. Use semantic props: `variant="danger"`, `status="executing"`, `size="sm"`. Do not add visual boolean props such as `blue`, `rounded`, or `shadow`.
+18. Use semantic props: `variant="danger"`, `status="executing"`, `size="sm"`. Do not add visual boolean props such as `orange`, `rounded`, or `shadow`.
 19. Respect `prefers-reduced-motion`. Motion must communicate state or relationship.
 20. Test responsive behavior at mobile, tablet, desktop, and large desktop sizes.
 

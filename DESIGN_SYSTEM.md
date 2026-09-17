@@ -25,7 +25,7 @@ primitive palette and scales
           → product composition
 ```
 
-Primitive palette values live in `src/tokens/colors.ts` and are mirrored into CSS only to construct themes. Components use semantic variables such as `--av-bg-surface`, `--av-fg-muted`, `--av-action-primary`, and `--av-agent-executing`. A component must never depend on `blue-500` or another raw palette step.
+Primitive palette values live in `src/tokens/colors.ts` and are mirrored into CSS only to construct themes. Components use semantic variables such as `--av-bg-surface`, `--av-fg-muted`, `--av-action-primary`, and `--av-agent-executing`. A component must never depend on `brand-500` or another raw palette step.
 
 The public token modules cover color, spacing, radius, typography, shadow, motion, and z-index. CSS variables use the `--av-` namespace to avoid collisions.
 
@@ -41,13 +41,25 @@ The public token modules cover color, spacing, radius, typography, shadow, motio
 
 `theme` accepts `light`, `dark`, or `system`. System mode observes the operating-system preference and responds to changes. `product` accepts `universe`, `social`, or a future registered product name.
 
-Universe uses a precise blue action accent, grid-backed technical compositions, compact metadata, tables, workflows, and command surfaces. Social uses a calm mineral-green accent, wider reading rhythm, richer identity, feeds, comments, and reactions. Status colors never change meaning between products.
+Universe uses a deep brick-red action accent, grid-backed technical compositions, compact metadata, tables, workflows, and command surfaces. Social uses a warmer burnt-orange accent, wider reading rhythm, richer identity, feeds, comments, and reactions. Status colors never change meaning between products.
 
 To add a product, define semantic overrides under `[data-av-product="name"]`. Avoid changing primitive component geometry. Validate action contrast, focus contrast, both color modes, and status recognition before release.
 
 ## Color philosophy
 
-Neutral canvas and surface layers hold the interface. The ecosystem accent identifies the family. Product accents identify context and primary action. Functional colors communicate success, warning, danger, and information. Agent and social semantics add narrow, named meanings.
+Neutral canvas and surface layers hold the interface. The palette is warm throughout: neutrals carry a red-brown tint, and both product accents sit in the orange-to-brick range. The ecosystem accent identifies the family. Product accents identify context and primary action. Functional colors communicate success, warning, danger, and information. Agent and social semantics add narrow, named meanings.
+
+Primitive families are `brand` (orange), `rust` (deep brick), `red` (signal crimson), `amber` (gold), `plum` (warm purple), `green` (success only), and a warm `neutral` ramp.
+
+### Keeping danger legible in a warm palette
+
+A warm brand range puts the primary action and the destructive action in neighbouring hues, which is exactly the pair that must never be confused. Three rules hold that apart, and any new accent must preserve them:
+
+1. Product accents are dark and low-chroma (`brand-700` #a9320c for Social, `rust-700` #7a2c2b for Universe). Danger is lighter and pushed toward crimson (`red-600` #d21f4b), so it separates by hue *and* by lightness.
+2. Success keeps a green hue. It is the one cool note in the system and it earns its place: red/green remains the most recognised status pair.
+3. Every value was checked for contrast and for protanopia and deuteranopia separation. Action, status, and foreground colors meet 4.5:1 against their background; status dots, borders, and focus rings meet 3:1. Danger against each product accent stays above ΔE2000 10 under both simulations, versus 3.8 for an untuned burnt-orange-and-red pairing.
+
+One pair stays inside tolerance rather than comfortably clear of it: `agent.online` against `agent.error` measures ΔE 7.9 under deuteranopia in light mode. `AgentStatus` renders its text label by default and `AgentAvatar` carries an `aria-label`, so the state is never conveyed by hue alone. Do not remove those labels.
 
 Color must not be the only signal. Status components pair color with labels, shapes, icons, or motion. Dense views should reserve strong color for the data that needs attention.
 
