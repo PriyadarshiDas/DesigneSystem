@@ -47,7 +47,7 @@ To add a product, define semantic overrides under `[data-av-product="name"]`. Av
 
 ## Color philosophy
 
-Neutral canvas and surface layers hold the interface. The palette is warm throughout: neutrals carry a red-brown tint, and both product accents sit in the orange-to-brick range. The ecosystem accent identifies the family. Product accents identify context and primary action. Functional colors communicate success, warning, danger, and information. Agent and social semantics add narrow, named meanings.
+Neutral canvas and surface layers hold the interface. Dark mode uses a neutral charcoal scale so information reads cleanly at long sessions; orange identifies committed action, never decoration. Light mode keeps the warm family while retaining the same semantic roles. The ecosystem accent identifies the family. Product accents identify context and primary action. Functional colors communicate success, warning, danger, and information. Agent and social semantics add narrow, named meanings.
 
 Primitive families are `brand` (orange), `rust` (deep brick), `red` (signal crimson), `amber` (gold), `plum` (warm purple), `green` (success only), and a warm `neutral` ramp.
 
@@ -73,7 +73,7 @@ The type scale includes `display`, four heading levels, three body levels, `labe
 
 Spacing uses a four-pixel base with the published scale `0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24`. Use smaller steps inside controls, middle steps for cards and groups, and larger steps for page rhythm.
 
-Radii use `none`, `sm`, `md`, `lg`, `xl`, and `full`. Controls generally use `md`; cards use `lg`; dialogs may use `xl`; avatars and compact status objects may use `full`. Large radii should remain rare.
+Radii use `none`, `control`, `sm`, `md`, `lg`, `xl`, and `full`. `control` is square and is the required radius for buttons, inputs, selects, and checkboxes. Cards use `lg`; dialogs may use `xl`; avatars, badges, and compact status objects may use `full`. Large radii should remain rare.
 
 Shadows indicate elevation, not decoration. Most cards use a border with no shadow. Floating menus, dialogs, drawers, and active drag surfaces use the elevation scale.
 

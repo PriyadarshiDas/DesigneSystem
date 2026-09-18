@@ -10,7 +10,7 @@
 }
 
 .av-root button, .av-root input, .av-root textarea, .av-root select { font: inherit; }
-.av-root a { color: inherit; }
+:where(.av-root) a { color: inherit; }
 .av-root ::selection { color: var(--av-fg-primary); background: var(--av-accent-soft); }
 
 .av-focusable:focus-visible,
